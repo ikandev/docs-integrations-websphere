@@ -1,5 +1,5 @@
 [[_phase_install_product_pix_pack]]
-== Install/Uninstall Product or Fix Pack
+= Install/Uninstall Product or Fix Pack
 
 == Purpose
 This is an optional WebSphere Phase.
