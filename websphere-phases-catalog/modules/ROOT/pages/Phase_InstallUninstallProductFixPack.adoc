@@ -1,0 +1,97 @@
+[[_phase_install_product_pix_pack]]
+== Install/Uninstall Product or Fix Pack
+
+== Purpose
+This is an optional WebSphere Phase.
+
+This phase is used to install, update or uninstall a WS product.
+
+== Usage
+The _Install/Uninstall Product or Fix Pack_ Phase can be used on Build and Deploy environments.
+
+This Phase is dependent on the _Build Product
+or Fix Pack_ Phase.
+
+== Parameters
+[cols="1,1,1,1", frame="topbot", options="header"]
+|===
+| Parameter
+| M/O
+| Description
+| Default Value
+
+|alm.phase.builder
+|M
+|
+|
+
+|alm.phase.extractBundle
+|M
+|
+|TRUE
+
+|alm.phase.mainScript
+|M
+|WAS Install/Uninstall Product or Pix Pack
+|wasProductInstallation.xml
+
+|packageOidInTarget
+|
+|Adding package Oid as folder in targetProject.dir parameter (initWebsphereInfo)
+|FALSE
+
+|propsfile.WStool
+|
+|property File of Product parameters (if no [WStool.offeringID].properties file)
+|$$.$$/${WStool.offeringID}.properties
+
+|sourceProject.dir
+|
+|Other source Location
+|${source}
+
+|sourceRepository.dir
+|
+|Product Zip file(s) shared Location
+|${sourceProject.dir}/repository
+
+|stopOnError
+|
+|Option for stopping on error IBM Installation Manager activity.
+|TRUE
+
+|targetProject.dir
+|
+|Other target Location for working
+|${target}
+
+|targetRepository.dir
+|
+|Unzipped WAS Zip file(s) Location as -repositories parameter for IBMIM tool
+|${targetProject.dir}/repository
+
+|IBMIM.command
+|
+|Install or Uninstall command
+|install
+
+|IBMIM.home
+|M
+|IBM Installation Manager Home
+|C:/QIBM/ProdData/InstallationManager
+
+|IBMIM.parms
+|
+|IBM Installation Manager command extra parameters
+|-acceptLicense -showProgress
+
+|WStool.active
+|
+|Option for working with the Product (true or false)
+|TRUE
+
+|WStool.offeringID
+|
+|IBM offeringID (if no propsfile.wstool):[type].[version] or [type].[version]_[FixPack] or liberty.[type].[version] or liberty.[type].[version]_[FixPack]
+|
+|===

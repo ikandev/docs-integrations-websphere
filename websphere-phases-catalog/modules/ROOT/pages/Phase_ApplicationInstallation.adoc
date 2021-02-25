@@ -1,0 +1,182 @@
+[[_phase_application_installation]]
+= Application Installation
+
+== Purpose
+This is an optional WebSphere Phase.
+
+This phase is used to _bind, install,
+update or uninstall an EAR application._ It supports the actions that need to be executed on the WebSphere Application Server in order to deploy a Web Application with a WAR or EAR file.
+
+[NOTE]
+====
+The _wasApp.installCommands_ parameter is the main parameter for this Phase.
+Depending on the command specified in that parameter, other parameters need to be defined or not.
+====
+
+== Usage
+The _Application Installation_ Phase can be used on Build and Deploy environments.
+However, it is not recommended to use it on Build environments, because conceptually it uses "`environment_deploy`" property file(s)
+
+== Parameters
+[cols="1,1,1,1", frame="topbot", options="header"]
+|===
+| Parameter
+| M/O
+| Description
+| Default Value
+
+|alm.phase.builder
+|M
+|Script Type
+|
+
+|alm.phase.extractBundle
+|M
+|
+|TRUE
+
+|alm.phase.mainScript
+|M
+|WAS Application Installation
+|wasAppInstall.xml
+
+|dir.langModels
+|
+|Language Models Location
+|${dir.wasModels}
+
+|dir.wasModels
+|
+|Application Models Location
+|$$.$$/models
+
+|dir.wasResources
+|
+|Property files Location
+|$$.$$/resources
+
+|propsfile.environment
+|
+|Property File of WAS environment
+|${dir.wasResources}/environment_deploy.properties
+
+|propsfile.languages
+|
+|Property File of WAS languages for managing the Application with installScript command
+|${dir.wasResources}/languages_${phase.mainScriptName}.properties
+
+|propsfile.waslogRules
+|
+|Property File of WebSphere Log Rules
+|${dir.wasResources}/wasLogRules.properties
+
+|propsfile.webapp
+|
+|Property File of WAS Application wsadmin parameters and options
+|${source}/webapp_${alm.project.vcrProjectName}.properties
+
+|stopOnError
+|
+|Option for stopping at the end.
+|TRUE
+
+|was.admin.password
+|
+|WAS Administrator password
+|*
+
+|was.admin.username
+|
+|WAS Administrator ID
+|Admin
+
+|was.cellname
+|
+|WAS Cellule name
+|${was.nodename}Cell
+
+|was.fail
+|
+|Fail the phase if Websphere answer is not OK
+|FALSE
+
+|was.install.root
+|
+|i.e. [WAS_INSTALL_ROOT]
+|
+
+|was.installableApps
+|
+|WAS installableApps location
+|${was.install.root}/installableApps
+
+|was.nodename
+|
+|WAS Node name
+|[hostname]Node01
+
+|was.profile
+|
+|WAS Profile name
+|AppSrv01
+
+|was.servername
+|
+|WAS Server name
+|server1
+
+|wasApp.installCommands
+|M
+|Available commands: bindingEAR;installApp;uninstallApp;updateApp;installScript,ignore
+|installApp
+
+|wasApp.scriptArgs
+|
+|Arguments for the wsadmin script to run.(Except default:[cell] [node] [server] [appName] [earName] [profile.path]/installableApps)
+|
+
+|wasApp.scriptLang
+|
+|The 'wsadmin' script language (jacl or jython)
+|jacl
+
+|wasApp.scriptLocation
+|
+|For installScript, the location of the script to run.
+|jacl
+
+|wasApp.scriptName
+|
+|For installScript command, the script to run or unknown file.
+|WASadmin.jacl
+
+|wasApp.scriptProperties
+|
+|For installScript command, the property file to use by the ${wasApp.scriptName}.
+|
+
+|webapp.applicationName
+|
+|Websphere name of this Application.
+|
+
+|webapp.contextPath
+|
+|Url Path of application (with in first '/')
+|/${webapp.applicationName}
+
+|webapp.dirDist
+|
+|Distribution location of EAR file or files for creating it.
+|dist
+
+|webapp.earName
+|
+|The ear file name for WebSphere
+|${webapp.applicationName}.ear
+
+|webapp.languageKey
+|M
+|For installScript command, the language key to use in the propsfile.languages file.
+|JACL
+|===

@@ -1,0 +1,142 @@
+[[_phase_create_profile]]
+= Create/Update/Delete Profile
+
+== Purpose
+This is an optional WebSphere Phase.
+
+This phase is used to manage a WAS profile.
+
+== Usage
+The _Create/Update/Delete Profile_ Phase can be used on Build and Deploy environments.
+
+This Phase is dependent on the _Install/Uninstall
+Product or Fix Pack_ Phase if the WAS product is not installed yet.
+
+== Parameters
+[cols="1,1,1,1", frame="topbot", options="header"]
+|===
+| Parameter
+| M/O
+| Default Value
+| Description
+
+|alm.phase.builder
+|M
+|
+|
+
+|alm.phase.extractBundle
+|M
+|
+|TRUE
+
+|alm.phase.mainScript
+|M
+|WAS Create/Update/Delete Profile
+|wasProfileAdmin.xml
+
+|propsfile.WSprofile
+|
+|Profile property File of WAS parameters
+|$$.$$/${WStool.profileName}.properties
+
+|sourceProject.dir
+|
+|Other source Location
+|${source}
+
+|stopOnError
+|
+|Option for stopping on error WAS Profile activity.
+|TRUE
+
+|targetProfile.dir
+|
+|WAS Profile(s) Location
+|${targetProject.dir}/profiles
+
+|targetProject.dir
+|
+|Other target Location for working
+|${target}
+
+|WStool.active
+|
+|Option for working with the Product (true or false)
+|TRUE
+
+|WStool.admin.password
+|M
+|WAS Administrator password
+|*
+
+|WStool.admin.username
+|M
+|WAS Administrator ID
+|ikanalm
+
+|WStool.cellName
+|
+|WAS Cellule name
+|${WStool.nodename}Cell
+
+|WStool.command
+|
+|create,update,delete command
+|create
+
+|WStool.dmgrport
+|
+|WAS DMGR Port
+|8880
+
+|WStool.installation
+|
+|WAS Installation Directory
+|C:/QIBM/ProdData/WebSphere/AppServer/V85/ND
+
+|WStool.nodeName
+|
+|WAS Node name
+|${was.hostname}Node01
+
+|WStool.parms
+|
+|Profile Manager command extra parameters (1)
+|
+
+|WStool.parms2
+|
+|Profile Manager command extra parameters (2)
+|
+
+|WStool.profileName
+|
+|WAS Profile name
+|AppSrv01
+
+|WStool.profilePath
+|
+|WAS Profiles Path
+|${WStool.installation}/profiles/${WStool.profileName}
+
+|WStool.serverName
+|
+|WAS Server name
+|server1
+
+|WStool.serverType
+|
+|WAS Server type:DEPLOYMENT_MANAGER,ADMIN_AGENT,JOB_MANAGER
+|DEPLOYMENT_MANAGER
+
+|WStool.service
+|
+|WAS Service Creation (true or false)
+|FALSE
+
+|WStool.templatePath
+|
+|WAS Profile Template Path
+|${WStool.installation}/profileTemplates/default
+|===

@@ -1,0 +1,48 @@
+[[_purpose]]
+= Overview of the Phases 
+The following WebSphere Phases can be used for the WebSphere Installation and Administration and for the Build and Deploy processes (M = Mandatory, O = Optional). 
+
+Click the name of one of the Phases in the table below to display all detailed information concerning the characteristics and usage of the Phase.
+
+[cols="1,1,1,1", frame="topbot", options="header"]
+|===
+| Build Phase
+| M/O
+| Environment
+| Explanation
+
+|<<Phase_ApplicationsAdministration.adoc#_phase_application_administration,Application(s) Administration>>
+|
+|Build and Deploy
+|Used for starting, stopping or listing a WAS application(s) or for applying or running a "`wsadmin`" script on a WAS application.
+
+|<<Phase_ApplicationInstallation.adoc#_phase_application_installation,Application Installation>>
+|
+|Build and Deploy
+|Used for binding, installing, updating or uninstalling an EAR application.
+
+|<<Phase_BuildProductFixPack.adoc#_phase_build_product_fix_pack,Build Product or Fix Pack>>
+|
+|Build and Deploy
+|Used for selecting the WS Product to be installed or updated.
+
+|<<Phase_CreateUpdateDeleteProfile.adoc#_phase_create_profile,Create/Update/Delete Profile>>
+|
+|Build and Deploy
+|Used for managing WS profiles.
+
+|<<Phase_DatabaseConfiguration.adoc#[_phase_database_configuration,Database Configuration>>
+|
+|Build and Deploy
+|Used for starting/stopping the WAS Server for applying a "`wsadmin`" Database Config script on the WAS Server(s).
+
+|<<Phase_InstallUninstallProductFixPack.adoc#_phase_install_product_pix_pack,Install/Uninstall Product or Fix Pack>>
+|
+|Build and Deploy
+|Used for installing, updating or uninstalling a WS product.
+
+|<<Phase_ServersAdministration.adoc#_phase_servers_administration,Servers Administration>>
+|
+|Build and Deploy
+|Used for starting/stopping the WAS Server(s) or for applying a "`wsadmin`" script on the WAS Server(s).
+|===

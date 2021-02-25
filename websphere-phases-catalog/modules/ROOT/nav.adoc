@@ -1,0 +1,13 @@
+.xref:Introduction.adoc[Introduction]
+.xref:Overview_WebSpherePhases.adoc[Overview of the Phases]
+
+.Admin Phases
+* xref:Phase_ApplicationsAdministration.adoc[Application(s) Administration]
+* xref:Phase_ApplicationInstallation.adoc[Application Installation]
+* xref:Phase_DatabaseConfiguration.adoc[Database Configuration]
+* xref:Phase_ServersAdministration.adoc[Servers Administration]
+
+.Installation Phases
+* xref:Phase_BuildProductFixPack.adoc[Build Product or Fix Pack]
+* xref:Phase_InstallUninstallProductFixPack.adoc[Install/Uninstall Product or Fix Pack]
+* xref:Phase_CreateUpdateDeleteProfile.adoc[Ceate/Update/Delete Profile]

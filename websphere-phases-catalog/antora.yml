@@ -1,0 +1,6 @@
+name: websphere-phases-catalog
+title: WebSphere Phases Catalog
+version: '1.0'
+start_page: ROOT:Introduction.adoc
+nav:
+- modules/ROOT/nav.adoc

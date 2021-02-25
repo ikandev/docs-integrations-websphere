@@ -1,0 +1,32 @@
+[[_purpose]]
+= Introduction
+IKAN ALM provides Life Cycle Management Solutions for the WebSphere as WebSphere Application Server (WAS) using specific Solution Phases. 
+
+This guide describes the different parameters used by each of those Phases.
+
+== Assumed Knowledge
+To be able to use the Phases, we assume that IKAN ALM is up and running, that the connection with the versioning component is set up and that the WebSphere Solution Phases have been imported in IKAN ALM. 
+
+== General
+Most of the WebSphere Administration Solution Phases generate Jacl or Jython scripts to be executed.
+
+To generate these Jacl or Jython scripts, the Phases use the parameters and properties specified in the following types of files:
+
+* Language properties files
++
+These files contain the properties of the different "`logical`" languages used with Jacl or Jython programming languages
+* Resources and environment properties files
++
+These files contain the properties for the different Environments
+* Model files
++
+These files contain the Jacl or Jython part models and other useful types
+
+
+[NOTE]
+====
+Before using the Phases, you should carefully check all the settings in the different files.
+If you need any assistance, you can always contact IKAN ALM Support.
+
+For more detailed information, refer to the Technical _IKAN ALM_WebSphere_Phases_Usage_ Guide.
+====
