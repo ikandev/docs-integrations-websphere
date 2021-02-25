@@ -1,4 +1,4 @@
-name: websphere-phases-catalog
+name: integration-websphere-phases-catalog
 title: WebSphere Phases Catalog
 version: '1.0'
 start_page: ROOT:Introduction.adoc
