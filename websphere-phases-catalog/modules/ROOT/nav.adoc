@@ -1,5 +1,5 @@
-.xref:Introduction.adoc[Introduction]
-.xref:Overview_WebSpherePhases.adoc[Overview of the Phases]
+xref:Introduction.adoc[Introduction]
+xref:Overview_WebSpherePhases.adoc[Overview of the Phases]
 
 .Admin Phases
 * xref:Phase_ApplicationsAdministration.adoc[Application(s) Administration]
